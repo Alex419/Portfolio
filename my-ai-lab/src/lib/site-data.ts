@@ -1,12 +1,3 @@
-function parseDate(dateStr: string): number {
-  const currentYear = new Date().getFullYear();
-  const yearMatch = dateStr.match(/(\d{4})/);
-  if (yearMatch) {
-    return parseInt(yearMatch[1]);
-  }
-  return currentYear;
-}
-
 export const projects = [
   {
     title: "Twin DJ Platform",
@@ -59,6 +50,12 @@ export const projects = [
 ].sort((a, b) => b.sortDate - a.sortDate).map(({ sortDate, ...rest }) => rest);
 
 export const experience = [
+  {
+    title: "Epic Systems - Software Developer Engineer Intern",
+    dates: "May 2026 - August 2026",
+    description: "Software developer intern at Epic Systems in Verona, WI. Architected a full-stack internal portal (React, C# ASP.NET) that automated Primary Source Verification for state medical board data, cutting specialist review time by ~60%, and built a secure REST API with an async batch pipeline (Azure Cosmos DB) to standardize credentialing data.",
+    sortDate: 2026,
+  },
   {
     title: "Empower - Software Engineering Intern",
     dates: "May 2024 - August 2024",

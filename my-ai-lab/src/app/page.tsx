@@ -37,10 +37,10 @@ export default function Home() {
           Building for <span className="text-blue-400">us</span>
         </h1>
         <p className="text-zinc-500 max-w-lg text-sm leading-relaxed">
-          Hey! I'm Alex, I want to create tools that make life better.
+          Hey! I&apos;m Alex, I want to create tools that make life better.
           <br></br>
           <br></br>
-          Columbia ML Master's 2026
+          Columbia ML Master&apos;s 2026
           <br></br>
           Tufts CS 2025
         </p>
@@ -62,7 +62,7 @@ export default function Home() {
       </main>
 
       <footer className="relative z-10 p-8 text-xs text-zinc-600 flex justify-between items-end">
-        <span>© 2026</span>
+        <span>© {new Date().getFullYear()}</span>
         <span className="flex gap-6">
           <a 
             href="https://www.linkedin.com/in/alex-gu-447288234/" 
