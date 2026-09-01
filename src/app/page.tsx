@@ -5,6 +5,7 @@ import { useState } from "react";
 import { SiteHeader } from "@/components/site-header";
 import { SiteBackground } from "@/components/site-background";
 import { buttonVariants } from "@/components/ui/button";
+import { StaggerList, StaggerItem } from "@/components/motion/reveal";
 
 export default function Home() {
   const [copied, setCopied] = useState(false);
@@ -22,33 +23,42 @@ export default function Home() {
       <SiteHeader />
 
       <main className="relative z-10 flex flex-col justify-center flex-1 px-8 max-w-4xl">
-        <p className="text-zinc-500 text-sm mb-4 tracking-wider">researcher · engineer · builder</p>
-        <h1 className="text-4xl md:text-5xl text-white font-normal leading-tight mb-6">
-          Building for <span className="text-blue-400">us</span>
-        </h1>
-        <p className="text-zinc-500 max-w-lg text-sm leading-relaxed">
-          Hey! I&apos;m Alex, I want to create tools that make life better.
-          <br></br>
-          <br></br>
-          Columbia ML Master&apos;s 2026
-          <br></br>
-          Tufts CS 2025
-        </p>
-
-        <div className="flex gap-4 mt-12">
-          <Link
-            href="/projects"
-            className={buttonVariants({ variant: "default", className: "h-auto px-6 py-3 text-sm" })}
-          >
-            view work
-          </Link>
-          <Link
-            href="/cv"
-            className={buttonVariants({ variant: "outline", className: "h-auto px-6 py-3 text-sm" })}
-          >
-            about me
-          </Link>
-        </div>
+        <StaggerList>
+          <StaggerItem>
+            <p className="text-zinc-500 text-sm mb-4 tracking-wider">researcher · engineer · builder</p>
+          </StaggerItem>
+          <StaggerItem>
+            <h1 className="text-4xl md:text-5xl text-white font-normal leading-tight mb-6">
+              Building for <span className="text-blue-400">us</span>
+            </h1>
+          </StaggerItem>
+          <StaggerItem>
+            <p className="text-zinc-500 max-w-lg text-sm leading-relaxed">
+              Hey! I&apos;m Alex, I want to create tools that make life better.
+              <br></br>
+              <br></br>
+              Columbia ML Master&apos;s 2026
+              <br></br>
+              Tufts CS 2025
+            </p>
+          </StaggerItem>
+          <StaggerItem>
+            <div className="flex gap-4 mt-12">
+              <Link
+                href="/projects"
+                className={buttonVariants({ variant: "default", className: "h-auto px-6 py-3 text-sm" })}
+              >
+                view work
+              </Link>
+              <Link
+                href="/cv"
+                className={buttonVariants({ variant: "outline", className: "h-auto px-6 py-3 text-sm" })}
+              >
+                about me
+              </Link>
+            </div>
+          </StaggerItem>
+        </StaggerList>
       </main>
 
       <footer className="relative z-10 p-8 text-xs text-zinc-600 flex justify-between items-end">

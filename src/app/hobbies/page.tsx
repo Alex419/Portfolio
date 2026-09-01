@@ -2,6 +2,7 @@ import { hobbies } from "@/lib/site-data";
 import { SiteHeader } from "@/components/site-header";
 import { SiteBackground } from "@/components/site-background";
 import { EntryCard } from "@/components/entry-card";
+import { RevealItem } from "@/components/motion/reveal";
 
 export default function Hobbies() {
   return (
@@ -15,7 +16,9 @@ export default function Hobbies() {
 
         <div className="grid gap-8 md:grid-cols-2">
           {hobbies.map((hobby) => (
-            <EntryCard key={hobby.title} title={hobby.title} description={hobby.description} />
+            <RevealItem key={hobby.title} hoverLift>
+              <EntryCard title={hobby.title} description={hobby.description} />
+            </RevealItem>
           ))}
         </div>
       </main>

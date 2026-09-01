@@ -2,6 +2,7 @@ import { projects } from "@/lib/site-data";
 import { SiteHeader } from "@/components/site-header";
 import { SiteBackground } from "@/components/site-background";
 import { EntryCard } from "@/components/entry-card";
+import { RevealItem } from "@/components/motion/reveal";
 
 export default function Projects() {
   return (
@@ -15,12 +16,13 @@ export default function Projects() {
 
         <div className="space-y-8">
           {projects.map((project) => (
-            <EntryCard
-              key={project.title}
-              title={project.title}
-              dates={project.dates}
-              description={project.description}
-            />
+            <RevealItem key={project.title} hoverLift>
+              <EntryCard
+                title={project.title}
+                dates={project.dates}
+                description={project.description}
+              />
+            </RevealItem>
           ))}
         </div>
       </main>

@@ -3,6 +3,7 @@ import { experience, extracurriculars, education } from "@/lib/site-data";
 import { SiteHeader } from "@/components/site-header";
 import { SiteBackground } from "@/components/site-background";
 import { EntryCard } from "@/components/entry-card";
+import { RevealItem } from "@/components/motion/reveal";
 import { cn } from "@/lib/utils";
 
 type Props = {
@@ -55,12 +56,9 @@ export default async function CV(props: Props) {
 
         <div className="space-y-8">
           {entries.map((entry) => (
-            <EntryCard
-              key={entry.title}
-              title={entry.title}
-              dates={entry.dates}
-              description={entry.description}
-            />
+            <RevealItem key={entry.title} hoverLift>
+              <EntryCard title={entry.title} dates={entry.dates} description={entry.description} />
+            </RevealItem>
           ))}
         </div>
       </main>
