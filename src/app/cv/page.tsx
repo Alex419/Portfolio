@@ -34,7 +34,7 @@ export default async function CV(props: Props) {
 
       <SiteHeader />
 
-      <main className="relative z-10 px-8 py-16 max-w-3xl">
+      <main className="relative z-10 px-8 py-16 max-w-4xl">
         <h1 className="text-3xl text-white mb-8">curriculum vitae</h1>
 
         <div className="flex gap-6 mb-10 border-b border-zinc-900">
